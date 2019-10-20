@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  distance: 1.5
-  apparent_magnitude: 1.5
-  mass: 1.5
+  name: MyString
+  distance: MyString
+  apparent_magnitude: MyString
+  mass: MyString
 
 two:
-  distance: 1.5
-  apparent_magnitude: 1.5
-  mass: 1.5
+  name: MyString
+  distance: MyString
+  apparent_magnitude: MyString
+  mass: MyString

@@ -1,19 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  mass: 1.5
-  radius: 1.5
-  semi-major_axis: 1.5
-  orbital_period: 1.5
-  eccentricity: 1.5
-  discovery_year: 1
+  label: MyString
+  information: MyText
+  star_system: one
 
 two:
-  name: MyString
-  mass: 1.5
-  radius: 1.5
-  semi-major_axis: 1.5
-  orbital_period: 1.5
-  eccentricity: 1.5
-  discovery_year: 1
+  label: MyString
+  information: MyText
+  star_system: two
