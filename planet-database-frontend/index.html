@@ -7,20 +7,44 @@
     <link href="https://fonts.googleapis.com/css?family=Helvetica&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <div class="top-header"><h1>Star Systems</h1></div>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    <div class="photo-container">
+	<link rel="stylesheet" href="assets/css/magister.css">
 
-      <h1 id =test></h1>
-      
-      <div class="quarter-container">
-        <img src="/Proxima_Centauri.jpg" alt="Book 1" class="image">
-        <h3>Proxima Centauri</h3>
-        <p>Text</p>
-      </div>
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+</head>
 
-    </div>
 
-    </body>
-  </html>
+<body>
+<section class="section" id="head">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+				<div class="top-header"><h1>Star Systems</h1></div>
+        <div id="new-star-system-container">
+            <input type="text" id="new-star-system-name" placeholder="Enter Star System">
+            <input type="text" id="new-star-system-distance" placeholder="Enter Distance in LY">
+            <input type="text" id="new-star-system-apparent_magnitude" placeholder="Enter Apparent Magnitude">
+            <input type="text" id="new-star-system-mass" placeholder="Enter Mass">
+            <input type="text" id="new-star-system-image" placeholder="Enter telescope URL image">
+            <button type="submit">Add Star System</button>
+        </div>
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+	</div>
+</section>
+
+<div id=star-system-data>
+</div>
+
+
+<script src="src/components/star_system.js"></script>
+<script src="src/components/star_systems.js"></script>
+<script src="src/components/app.js"></script>
+<script src="src/adapters/StarSystemsAdapter.js"></script>
+<script src="src/index.js"></script>
+
+</body>
+</html>

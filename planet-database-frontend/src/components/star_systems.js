@@ -9,7 +9,7 @@ class StarSystems {
     this.adapter
       .getStarSystems()
       .then(star_systems => {
-      star_systems.forEach(star_system => this.star_systems.push(star_system))
+      star_systems.forEach(star_system => this.star_systems.push(new star_system))
       })
       .then(() => {
       this.render()

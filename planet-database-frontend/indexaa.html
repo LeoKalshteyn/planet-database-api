@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Planet Database</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Helvetica&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="top-header"><h1>Star Systems</h1></div>
+
+    <div id="new-star-system-container">
+        <h3>Add a star system</h3>
+        <input type="text" id="new-star-system-name" placeholder="Enter Star System">
+        <input type="text" id="new-star-system-distance" placeholder="Enter Distance in LY">
+        <input type="text" id="new-star-system-apparent_magnitude" placeholder="Enter Apparent Magnitude">
+        <input type="text" id="new-star-system-mass" placeholder="Enter Mass">
+        <input type="submit" name="" value="Add Star System">
+    </div>
+
+    <div id=star-system-data>
+    </div>
+
+    <script src="src/components/star_system.js"></script>
+    <script src="src/components/star_systems.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/adapters/StarSystemsAdapter.js"></script>
+    <script src="src/index.js"></script>
+
+    </body>
+  </html>
