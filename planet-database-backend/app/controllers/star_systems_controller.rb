@@ -3,7 +3,7 @@ class StarSystemsController < ApplicationController
 
   def index
     @star_systems = StarSystem.all
-    render json: @star_systems, only: [:id, :name, :distance, :apparent_magnitude, :mass], status: 200
+    render json: @star_systems, only: [:id, :name, :distance, :apparent_magnitude, :mass, :image], status: 200
   end
 
   def create
@@ -31,7 +31,7 @@ class StarSystemsController < ApplicationController
   private
 
   def star_system_params
-    params.require(:star_system).permit(:distance, :apparent_magnitude, :mass)
+    params.require(:star_system).permit(:distance, :apparent_magnitude, :mass, :image)
   end
 
   def set_params
