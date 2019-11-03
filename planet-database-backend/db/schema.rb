@@ -10,29 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_22_213715) do
+ActiveRecord::Schema.define(version: 2019_11_03_194927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "planets", force: :cascade do |t|
     t.string "label"
-    t.text "information"
-    t.bigint "star_system_id"
+    t.string "planet_mass"
+    t.string "radius"
+    t.string "semimajor_axis"
+    t.string "orbital_period"
+    t.string "eccentricity"
+    t.string "discovery_year"
+    t.bigint "star_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["star_system_id"], name: "index_planets_on_star_system_id"
+    t.index ["star_id"], name: "index_planets_on_star_id"
   end
 
-  create_table "star_systems", force: :cascade do |t|
+  create_table "stars", force: :cascade do |t|
     t.string "name"
     t.string "distance"
-    t.string "apparent_magnitude"
+    t.string "magnitude"
     t.string "mass"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
   end
 
-  add_foreign_key "planets", "star_systems"
+  add_foreign_key "planets", "stars"
 end

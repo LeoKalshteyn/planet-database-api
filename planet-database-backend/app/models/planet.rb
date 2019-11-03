@@ -1,3 +1,3 @@
 class Planet < ApplicationRecord
-  belongs_to :star_system
+  belongs_to :star
 end

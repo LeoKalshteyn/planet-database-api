@@ -2,10 +2,10 @@
 
 one:
   label: MyString
-  information: MyText
-  star_system: one
+  information: MyString
+  star: one
 
 two:
   label: MyString
-  information: MyText
-  star_system: two
+  information: MyString
+  star: two

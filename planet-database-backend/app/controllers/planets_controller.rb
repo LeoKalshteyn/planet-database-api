@@ -31,11 +31,10 @@ class PlanetsController < ApplicationController
   private
 
   def planet_params
-    params.require(:planet).permit(:label, :information, :star_system_id)
+    params.require(:planet).permit(:label, :planet_mass, :radius, :semimajor_axis, :orbital_period, :eccentricity, :discovery_year, :star_id)
   end
 
   def set_params
     @planet = Planet.find(params[:id])
   end
-
 end
