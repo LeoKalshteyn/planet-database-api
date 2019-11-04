@@ -4,6 +4,9 @@ class Star {
     // console.log(starJSON) // logs
     this.id = starJSON.id
     this.name = starJSON.name
+    this.distance = starJSON.distance
+    this.magnitude = starJSON.magnitude
+    this.mass = starJSON.mass
     this.image = starJSON.image
     this.planets = starJSON.planets
   }
@@ -14,13 +17,26 @@ class Star {
     const starBlock = document.createElement('div')
     starBlock.className = "star-quarter-container"
 
+    const name = document.createElement('h3')
+    name.innerHTML = this.name
+    starBlock.appendChild(name)
+
+    const distance = document.createElement('h3')
+    distance.innerHTML = this.distance
+    starBlock.appendChild(distance)
+
+    const magnitude = document.createElement('h3')
+    magnitude.innerHTML = this.magnitude
+    starBlock.appendChild(magnitude)
+
+    const mass = document.createElement('h3')
+    mass.innerHTML = this.mass
+    starBlock.appendChild(mass)
+
     const image = document.createElement('img')
     image.src = this.image
     starBlock.appendChild(image)
 
-    const name = document.createElement('h3')
-    name.innerHTML = this.name
-    starBlock.appendChild(name)
 
     const planets = document.createElement('ul')
     starBlock.appendChild(planets)
