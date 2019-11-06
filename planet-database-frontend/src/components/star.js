@@ -16,6 +16,16 @@ class Star {
 
     const starBlock = document.createElement('div')
     starBlock.className = "star-quarter-container"
+    starsContainer.appendChild(starBlock)
+
+    const deleteButton = document.createElement("BUTTON")
+    deleteButton.setAttribute("id", `delete-button-${this.id}`)
+    deleteButton.innerHTML = "Delete Star"
+    starBlock.appendChild(deleteButton)
+    deleteButton.addEventListener('click', () => {
+      starBlock.remove()
+      this.deleteStar(`${this.id}`)
+    })
 
     const name = document.createElement('h3')
     name.innerHTML = this.name
@@ -41,6 +51,17 @@ class Star {
     starBlock.appendChild(planets)
     planets.innerHTML = this.planets.map(planet => `<li><p>${planet.label}</p></li>`).join('')
 
-    starsContainer.appendChild(starBlock)
   }
+
+  deleteStar(id){
+  //  console.log(`star is ID: ${id}`)
+    return fetch('http://localhost:3000/stars' + '/' + id, {
+    method: 'DELETE',
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+      }
+    })
+  }
+
 }

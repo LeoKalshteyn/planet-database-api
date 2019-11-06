@@ -15,15 +15,6 @@ class StarsController < ApplicationController
     render json: @stars, status: 200
   end
 
-  def update
-    @star.update(star_params)
-    if @star.save
-      render json: @star, status: 200
-    else
-      render json: { errors: @star.errors.full_messages }, status: 422
-    end
-  end
-
   def destroy
     @star.destroy
   end
