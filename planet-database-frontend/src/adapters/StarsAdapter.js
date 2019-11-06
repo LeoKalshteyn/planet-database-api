@@ -9,7 +9,7 @@ class StarsAdapter{
 
   createStar(nameValue, distanceValue, magnitudeValue, massValue, imageValue) {
     const star = {
-      name: nameeValue,
+      name: nameValue,
       distance: distanceValue,
       magnitude: magnitudeValue,
       mass: massValue,

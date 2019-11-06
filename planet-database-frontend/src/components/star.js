@@ -11,7 +11,7 @@ class Star {
     this.planets = starJSON.planets
   }
 
-  createStarBlock() {
+  renderStarBlock() {
   const starsContainer = document.getElementById('stars-data')
 
     const starBlock = document.createElement('div')
@@ -36,7 +36,6 @@ class Star {
     const image = document.createElement('img')
     image.src = this.image
     starBlock.appendChild(image)
-
 
     const planets = document.createElement('ul')
     starBlock.appendChild(planets)

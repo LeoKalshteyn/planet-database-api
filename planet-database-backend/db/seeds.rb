@@ -9,9 +9,6 @@
 Star.destroy_all
 Planet.destroy_all
 
-
-puts "Seeding..."
-
 b1 = Star.create(name: "Proxima Centauri", distance: "4.2441", magnitude: "11.13", mass: "0.123", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/New_shot_of_Proxima_Centauri%2C_our_nearest_neighbour.jpg/1200px-New_shot_of_Proxima_Centauri%2C_our_nearest_neighbour.jpg")
 b2 = Star.create(name: "Barnard's Star", distance: "5.958", magnitude: "9.511", mass: "0.144", image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Barnardstar2006.jpg")
 b3 = Star.create(name: "Epsilon Eridani", distance: "10.446", magnitude: "3.73", mass: "0.83", image: "https://www.eso.org/public/outreach/eduoff/cas/cas2002/cas-projects/sweden_eridani_1/image002.jpg")
