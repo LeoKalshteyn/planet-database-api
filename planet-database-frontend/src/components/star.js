@@ -62,8 +62,8 @@ class Star {
   return `<p>Planet Label: ${planet.label}
           <p>Mass: ${planet.planet_mass}
           <p>Radius: ${planet.radius}
-          <p>Semimajor-Axis: ${planet.semimajor_axis}
-          <p>Orbital-Period: ${planet.orbital_period}
+          <p>Semimajor-Axis (AU): ${planet.semimajor_axis}
+          <p>Orbital-Period (Days): ${planet.orbital_period}
           <p>Eccentricity: ${planet.eccentricity}
           <p>Discovery-Year: ${planet.discovery_year}</p>`
 }
