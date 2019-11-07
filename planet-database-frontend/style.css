@@ -1,67 +1,121 @@
-label{font-family: 'Montserrat', sans-serif;}
-h1,h2,h3,h4,h5,h6 {font-family: 'Work Sans', sans-serif;}
+a{
+    color: #ffffff;
+    text-decoration: none;
+	font-weight: bold;
+}
 
-h1{
-  font-size: 40px;
+a:hover {
+    text-decoration: none;
+    color: #0870d7;
 }
 
 h2{
-  min-height: 75px;
-  vertical-align: middle;
+	font: 24px Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #0870d7;
+		padding: 30px 0px 10px 40px;
 }
 
 h3{
-  font-size: 18px;
-  margin: 8px;
-  text-align: left;
+	background: url(images/title.png) no-repeat top left;
+	font: 18px Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	height: 43px;
+	width: 265px;
+	text-align: center;
+	line-height: 43px;
+	font-weight: normal;
+
 }
 
-h4{
+body{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    margin: 0;
-    font-style: normal;
-    font-weight: lighter;
-    color: red;
+    line-height: 18px;
+    color: #ffffff;
+    background: #000000 url(images/bg.jpg) no-repeat center 87px;
+
 }
 
-p{
- font-size: 14px;
- text-align: left;
- margin: 8px;
-}
 
-img{
-  width: 30%;
-  height: 30%;
-  padding:4px;
-}
+/* Header */
 
-.top-header {
+#header {
+  position: relative;
   padding-top:16px;
   padding-bottom:16px;
   text-align:center;
+
 }
 
-.photo-container{
-  padding-top:16px;
-  padding-bottom:16px;
-  margin: 0 3%;
-  text-align:center
+#txt-inside-img{
+  /* font-size: 40px; */
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate( -50% );
+
 }
 
-.quarter-container{
-  float: left;
-  max-width: 385px;
-  min-width: 360px;
-  height: 360px;
-  padding:4px 10px;
+/* Stars Data */
+
+section{
+  max-width: 1100px;
+  margin: 16px auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.image{
-  height: 185px;
+.star-container{
+  box-sizing: border-box;
+  width: 250px;
+  height: 800px;
+}
+
+button:hover{
+  opacity: .5;
+  transition: .9s;
+  color: grey;
+}
+
+img {
   width: 100%;
+  height: 280px;
 }
 
-.#new-planet{{
-  padding: 5px 0
+.star-stats {
+  width: 250px;
+  height: 100px;
+  margin-top: 12px;
+  margin-bottom: 16px
 }
+
+  /* Planets */
+.planet-stats{
+  width: 250px;
+  height: 266px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-top: 12px
+}
+
+  p{
+   font-size: 14px;
+   text-align: left;
+  }
+
+
+  /* New Star */
+
+  #new-star-container{
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding-bottom:16px;
+    text-align:center;
+    background-color: light-grey;
+  }

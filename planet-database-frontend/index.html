@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Planet Database</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Work+Sans:300&display=swap" rel="stylesheet">
-
-  	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-  	<link rel="stylesheet" href="assets/css/magister.css">
-
-  	<!-- Fonts -->
-  	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	  <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
   </head>
 
 
   <body>
 
-    <section class="section" id="head">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
-            <div class="top-header"><h1>Planet Database</h1></div>
-            <div id="new-star-container">
-              <form id="new-star-form">
-                <h3>Add a new star</h3>
-                <input type="text" id="new-star-name" placeholder="Enter Star System">
-                <input type="text" id="new-star-distance" placeholder="Enter Distance in LY">
-                <input type="text" id="new-star-magnitude" placeholder="Enter Magnitude">
-                <input type="text" id="new-star-mass" placeholder="Enter Mass">
-                <input type="text" id="new-star-image" placeholder="Enter telescope URL image">
-                <button type="submit">Add Star System</button>
-              </form>
+    <div id="header">
+       <h1>Planet Database</h1>
+       <h2 id ="txt-inside-img">Database For Exoplanets Discovered</h2>
+    </div>
+
+
+    <div id="new-star-container">
+      <form id="new-star-form">
+        <h2>Add a new star</h2>
+        <label for="new-star-name">Star Name:</label>
+        <input type="text" id="new-star-name" placeholder="Enter Star System">
+        <label for="new-star-distance">Distance:</label>
+        <input type="text" id="new-star-distance" placeholder="Enter Distance in LY">
+        <label for="new-star-magnitude">Magnitude:</label>
+        <input type="text" id="new-star-magnitude" placeholder="Enter Magnitude">
+        <label for="new-star-mass">Mass:</label>
+        <input type="text" id="new-star-mass" placeholder="Enter Mass">
+        <label for="new-star-image">Image URL:</label>
+        <input type="text" id="new-star-image" placeholder="Enter telescope URL image">
+        <button type="submit">Add Star System</button>
+      </form>
+    </div>
+
+
+    <div class="container">
+      <section id="stars-data"></section>
+    </div>
+
+
+    <script src="src/components/star.js"></script>
+    <script src="src/components/stars.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/adapters/StarsAdapter.js"></script>
+    <script src="src/index.js"></script>
+
+
+		 <div id="wrapper">
+        <div id="slider-wrapper">
+            <div id="slider" class="nivoSlider">
+                <img src="images/header.jpg" alt="" />
+                <img src="images/header2.jpg" alt=""/>
+                <img src="images/header3.jpg" alt="" />
+				 <img src="images/header4.jpg" alt="" />
             </div>
-          </div> <!-- /col -->
-        </div> <!-- /row -->
-      </div>
-    </section>
+        </div>
 
 
-  <div id=stars-data>
-  </div>
-
-
-  <script src="src/components/star.js"></script>
-  <script src="src/components/stars.js"></script>
-  <script src="src/components/app.js"></script>
-  <script src="src/adapters/StarsAdapter.js"></script>
-  <script src="src/index.js"></script>
-
-
-  </body>
+    </body>
 </html>

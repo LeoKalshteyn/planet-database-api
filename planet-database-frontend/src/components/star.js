@@ -15,7 +15,7 @@ class Star {
   const starsContainer = document.getElementById('stars-data')
 
     const starBlock = document.createElement('div')
-    starBlock.className = "star-quarter-container"
+    starBlock.className = "star-container"
     starsContainer.appendChild(starBlock)
 
     const deleteButton = document.createElement("BUTTON")
@@ -47,11 +47,26 @@ class Star {
     image.src = this.image
     starBlock.appendChild(image)
 
-    const planets = document.createElement('ul')
-    starBlock.appendChild(planets)
-    planets.innerHTML = this.planets.map(planet => `<li><p>${planet.label}</p></li>`).join('')
+    const planetStats = document.createElement('div')
+    planetStats.className = "planet-stats"
+    starBlock.appendChild(planetStats)
+
+    const planets = document.createElement('div')
+    planetStats.appendChild(planets)
+    planets.innerHTML = this.planets.map(planet => this.planetDetails(planet)).join('')
 
   }
+
+  planetDetails(planet){
+  // console.log(planet)
+  return `<p>Planet Label: ${planet.label}
+          <p>Mass: ${planet.planet_mass}
+          <p>Radius: ${planet.radius}
+          <p>Semimajor-Axis: ${planet.semimajor_axis}
+          <p>Orbital-Period: ${planet.orbital_period}
+          <p>Eccentricity: ${planet.eccentricity}
+          <p>Discovery-Year: ${planet.discovery_year}</p>`
+}
 
   deleteStar(id){
   //  console.log(`star is ID: ${id}`)
