@@ -25,5 +25,6 @@ class StarsAdapter{
       body:JSON.stringify(star)
     })
     .then(res => res.json())
+    .catch(error => console.log("Error: " + error))
   }
 }

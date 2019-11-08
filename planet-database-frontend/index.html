@@ -21,15 +21,51 @@
         <h2>Add a new star</h2>
         <label for="new-star-name">Star Name:</label>
         <input type="text" id="new-star-name" placeholder="Enter Star System">
+
         <label for="new-star-distance">Distance:</label>
         <input type="text" id="new-star-distance" placeholder="Enter Distance in LY">
+
         <label for="new-star-magnitude">Magnitude:</label>
         <input type="text" id="new-star-magnitude" placeholder="Enter Magnitude">
+
         <label for="new-star-mass">Mass:</label>
         <input type="text" id="new-star-mass" placeholder="Enter Mass">
+
         <label for="new-star-image">Image URL:</label>
         <input type="text" id="new-star-image" placeholder="Enter telescope URL image">
         <button type="submit">Add Star System</button>
+      </form>
+    </div>
+
+
+    <div id="new-planet-container">
+      <form id="new-planet-form">
+        <div class="planet-data">
+          <label for="new-planet-label">Planet Label:</label>
+          <input type="text" id="new-planet-label" placeholder="Enter Planet Label">
+
+          <label for="new-planet-mass">Planet Mass:</label>
+          <input type="text" id="new-planet-mass" placeholder="Enter Planet Mass">
+
+          <label for="new-planet-radius">Planet Radius:</label>
+          <input type="text" id="new-planet-radius" placeholder="Enter Radius">
+
+          <label for="new-planet-semimajor-axis">Planet Semimajor-Axis:</label>
+          <input type="text" id="new-planet-semimajor-axis" placeholder="Enter Semimajor-Axis">
+
+          <label for="new-planet-orbital-period">Planet Orbital Period:</label>
+          <input type="text" id="new-planet-orbital-period" placeholder="Enter Orbital Period">
+
+          <label for="new-planet-eccentricity">Planet Eccentricity:</label>
+          <input type="text" id="new-planet-eccentricity" placeholder="Enter Eccentricity">
+
+          <label for="new-planet-discovery-year">Discovery Year:</label>
+          <input type="text" id="new-planet-discovery-year" placeholder="Enter Discovery Year">
+        </div>
+
+        <div id="buttons">
+          <button onclick="closeForm()">Close</button>
+        </div>
       </form>
     </div>
 
@@ -45,16 +81,6 @@
     <script src="src/adapters/StarsAdapter.js"></script>
     <script src="src/index.js"></script>
 
-
-		 <div id="wrapper">
-        <div id="slider-wrapper">
-            <div id="slider" class="nivoSlider">
-                <img src="images/header.jpg" alt="" />
-                <img src="images/header2.jpg" alt=""/>
-                <img src="images/header3.jpg" alt="" />
-				 <img src="images/header4.jpg" alt="" />
-            </div>
-        </div>
 
 
     </body>
