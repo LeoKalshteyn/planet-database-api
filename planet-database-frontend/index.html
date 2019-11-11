@@ -9,27 +9,35 @@
 
 
   <body>
-
+    <!-- Top Header -->
     <div id="header">
        <h1>Planet Database</h1>
        <h2 id ="txt-inside-img">Database For Exoplanets Discovered</h2>
     </div>
 
-
+    <!-- Add New Star -->
     <div id="new-star-container">
       <form id="new-star-form">
         <h2>Add a new star</h2>
         <label for="new-star-name">Star Name:</label>
         <input type="text" id="new-star-name" placeholder="Enter Star System">
 
+        <br>
+
         <label for="new-star-distance">Distance:</label>
         <input type="text" id="new-star-distance" placeholder="Enter Distance in LY">
+
+        <br>
 
         <label for="new-star-magnitude">Magnitude:</label>
         <input type="text" id="new-star-magnitude" placeholder="Enter Magnitude">
 
+        <br>
+
         <label for="new-star-mass">Mass:</label>
         <input type="text" id="new-star-mass" placeholder="Enter Mass">
+
+        <br>
 
         <label for="new-star-image">Image URL:</label>
         <input type="text" id="new-star-image" placeholder="Enter telescope URL image">
@@ -37,27 +45,39 @@
       </form>
     </div>
 
-
+    <!-- Add New Planet -->
     <div id="new-planet-container">
       <form id="new-planet-form">
         <div class="planet-data">
           <label for="new-planet-label">Planet Label:</label>
           <input type="text" id="new-planet-label" placeholder="Enter Planet Label">
 
+          <br>
+
           <label for="new-planet-mass">Planet Mass:</label>
           <input type="text" id="new-planet-mass" placeholder="Enter Planet Mass">
+
+          <br>
 
           <label for="new-planet-radius">Planet Radius:</label>
           <input type="text" id="new-planet-radius" placeholder="Enter Radius">
 
+          <br>
+
           <label for="new-planet-semimajor-axis">Planet Semimajor-Axis:</label>
           <input type="text" id="new-planet-semimajor-axis" placeholder="Enter Semimajor-Axis">
+
+          <br>
 
           <label for="new-planet-orbital-period">Planet Orbital Period:</label>
           <input type="text" id="new-planet-orbital-period" placeholder="Enter Orbital Period">
 
+          <br>
+
           <label for="new-planet-eccentricity">Planet Eccentricity:</label>
           <input type="text" id="new-planet-eccentricity" placeholder="Enter Eccentricity">
+
+          <br>
 
           <label for="new-planet-discovery-year">Discovery Year:</label>
           <input type="text" id="new-planet-discovery-year" placeholder="Enter Discovery Year">
@@ -69,12 +89,12 @@
       </form>
     </div>
 
-
+    <!-- Star Grid-->
     <div class="container">
       <section id="stars-data"></section>
     </div>
 
-
+    <!-- JS scripts-->
     <script src="src/components/star.js"></script>
     <script src="src/components/stars.js"></script>
     <script src="src/components/app.js"></script>

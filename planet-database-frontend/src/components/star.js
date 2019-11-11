@@ -33,22 +33,23 @@ class Star {
     planetButton.addEventListener('click', this.getNewStarForm.bind(this))
 
     const name = document.createElement('h3')
-    name.innerHTML = this.name
+    name.innerHTML = (`Name: ${this.name}`)
     starBlock.appendChild(name)
 
     const distance = document.createElement('h3')
-    distance.innerHTML = this.distance
+    distance.innerHTML = (`Distance in LY: ${this.distance}`)
     starBlock.appendChild(distance)
 
     const magnitude = document.createElement('h3')
-    magnitude.innerHTML = this.magnitude
+    magnitude.innerHTML = (`Apparent Magnitude: ${this.magnitude}`)
     starBlock.appendChild(magnitude)
 
     const mass = document.createElement('h3')
-    mass.innerHTML = this.mass
+    mass.innerHTML = (`Solar Mass: ${this.mass}`)
     starBlock.appendChild(mass)
 
     const image = document.createElement('img')
+    image.setAttribute("class", "image")
     image.src = this.image
     starBlock.appendChild(image)
 
@@ -65,7 +66,8 @@ class Star {
 
   planetDetails(planet){
   // console.log(planet)
-  return `<p>Planet Label: ${planet.label}</p>
+  return `<p>-----------------------------</p>
+          <p>Planet Label: ${planet.label}</p>
           <p>Mass: ${planet.planet_mass}</p>
           <p>Radius: ${planet.radius}</p>
           <p>Semimajor-Axis (AU): ${planet.semimajor_axis}</p>
@@ -86,17 +88,16 @@ class Star {
 
   getNewStarForm(event){
     // console.log(this)
-    event.preventDefault();
-    const newPlanetForm = document.getElementById('new-planet-form')
-    newPlanetForm.name = this.id
-    const submitButton = document.createElement("button")
-    submitButton.innerHTML = "Add"
-    submitButton.id = "planet-submit"
-    submitButton.type = "submit"
-    const buttonDiv = document.getElementById("buttons")
-    buttonDiv.appendChild(submitButton)
-    submitButton.addEventListener('click', this.submitPlanet.bind(this))
-  }
+  event.preventDefault();
+  const newPlanetForm = document.getElementById('new-planet-form')
+  const submitButton = document.createElement("button")
+  submitButton.innerHTML = "Add"
+  submitButton.id = "planet-submit"
+  submitButton.type = "submit"
+  const buttonDiv = document.getElementById("buttons")
+  buttonDiv.appendChild(submitButton)
+  submitButton.addEventListener('click', this.submitPlanet.bind(this))
+}
 
   submitPlanet(event){
     event.preventDefault();
@@ -111,19 +112,33 @@ class Star {
     const newPlanetEccentricity = document.getElementById('new-planet-eccentricity')
     const newPlanetDiscoveryYear = document.getElementById('new-planet-discovery-year')
 
-    const planetBox = document.getElementById(`planet-${form.name}`)
-    const pDiv = document.createElement('p')
-    planetBox.appendChild(pDiv)
+    const planetBox = document.getElementById(`planet-${this.id}`)
+    const pDivSeperator= document.createElement('p')
+    const pDivLabel = document.createElement('p')
+    const pDivPlanetMass = document.createElement('p')
+    const pDivRadius = document.createElement('p')
+    const pDivSemimajorAxis = document.createElement('p')
+    const pDivOrbitalPeriod = document.createElement('p')
+    const pDivEccentricity = document.createElement('p')
+    const pDivDiscoveryYear = document.createElement('p')
+    planetBox.appendChild(pDivSeperator)
+    planetBox.appendChild(pDivLabel)
+    planetBox.appendChild(pDivPlanetMass)
+    planetBox.appendChild(pDivRadius)
+    planetBox.appendChild(pDivSemimajorAxis)
+    planetBox.appendChild(pDivOrbitalPeriod)
+    planetBox.appendChild(pDivEccentricity)
+    planetBox.appendChild(pDivDiscoveryYear)
 
     const planetAddition = {
-        star_id: form.name,
+        star_id: this.id,
         label: newPlanetLabel.value,
         planet_mass: newPlanetMass.value,
         radius: newPlanetRadius.value,
         semimajor_axis: newPlanetSemimajorAxis.value,
         orbital_period: newPlanetOrbitalPeriod.value,
         eccentricity: newPlanetEccentricity.value,
-        discovery_year: newPlanetDiscoveryYear.value
+        discovery_year: newPlanetDiscoveryYear.value,
     };
 
     fetch('http://localhost:3000/planets', {
@@ -137,7 +152,15 @@ class Star {
     .then(res => res.json())
       .then(planet => {
       // console.log(planet)
-      pDiv.innerHTML = planet.label
+      pDivSeperator.innerHTML =  `<p>-----------------------------</p>`
+      pDivLabel.innerHTML =  `<p>Planet Label: ${planet.label}</p>`
+      pDivPlanetMass.innerHTML = `<p>Mass: ${planet.planet_mass}</p>`
+      pDivRadius.innerHTML = `<p>Radius: ${planet.radius}</p>`
+      pDivSemimajorAxis.innerHTML = `<p>Semimajor-Axis (AU): ${planet.semimajor_axis}</p>`
+      pDivOrbitalPeriod.innerHTML = `<p>Orbital-Period (Days): ${planet.orbital_period}</p>`
+      pDivEccentricity.innerHTML = `<p>Eccentricity: ${planet.eccentricity}</p>`
+      pDivDiscoveryYear.innerHTML = `<p>Discovery-Year: ${planet.discovery_year}</p>`
+    //  pDiv.innerHTML = [(`<p>Planet Label: ${planet.label}</p>`),(`<p>Mass: ${planet.planet_mass}</p>`),(`<p>Radius: ${planet.radius}</p>`),(`<p>Semimajor-Axis (AU): ${planet.semimajor_axis}</p>`),(`<p>Orbital-Period (Days): ${planet.orbital_period}</p>`),(`<p>Eccentricity: ${planet.eccentricity}</p>`),(`<p>Discovery-Year: ${planet.discovery_year}</p>`)]
 
       newPlanetLabel.value = ' '
       newPlanetMass.value = ' '

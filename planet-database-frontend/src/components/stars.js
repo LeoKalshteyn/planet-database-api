@@ -23,7 +23,7 @@ class Stars {
     const distanceValue = this.newStarDistance.value;
     const magnitudeValue = this.newStarMagnitude.value;
     const massValue = this.newStarMass.value;
-    const imageValue = this.newStarForm.value;
+    const imageValue = this.newStarImage.value;
 
     this.adapter.createStar(nameValue,distanceValue,magnitudeValue,massValue,imageValue)
       .then(star => {
@@ -57,7 +57,6 @@ class Stars {
 
   renderStars() {
     // console.log(this.stars)
-    const starsContainer = document.getElementById('star-data')
     this.stars.map(star => star.renderStarBlock())
   }
 }

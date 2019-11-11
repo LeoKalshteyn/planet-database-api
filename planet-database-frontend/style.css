@@ -73,6 +73,7 @@ section{
   box-sizing: border-box;
   width: 250px;
   height: 800px;
+  margin-bottom: 250px;
 }
 
 button:hover{
@@ -135,18 +136,6 @@ img {
   text-align:center;
   padding: 20px
 }
-
-#new-planet-label{
-  height: 20px;
-  width: 20%
-}
-
-#new-planet-mass{
-  height: 20px;
-  width: 20%
-}
-
-
 
 #buttons{
   padding: 20px
