@@ -11,23 +11,6 @@ class PlanetsController < ApplicationController
     render json: @planet, status: 200
   end
 
-  def show
-    render json: @planet, status: 200
-  end
-
-  def update
-    @planet.update(planet_params)
-    if @planet.save
-      render json: @planet, status: 200
-    else
-      render json: { errors: @planet.errors.full_messages }, status: 422
-    end
-  end
-
-  def destroy
-    @planet.destroy
-  end
-
   private
 
   def planet_params

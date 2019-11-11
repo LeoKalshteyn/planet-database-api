@@ -8,11 +8,11 @@ class StarsController < ApplicationController
 
   def create
     @star = Star.create(star_params)
-    render json: @stars, status: 200
+    render json: @star, status: 200
   end
 
   def show
-    render json: @stars, status: 200
+    render json: @star, status: 200
   end
 
   def destroy
