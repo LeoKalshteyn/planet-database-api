@@ -92,8 +92,8 @@ class Star {
   getNewStarForm(event){
     // console.log(this)
   event.preventDefault();
-  const newPlanetForm = document.getElementById('new-planet-form')
-  const submitButton = document.createElement("button")
+  const newPlanetForm = document.getElementById('new-planet-form') //get new planet form from html
+  const submitButton = document.createElement("button") // creates the add planet button
   submitButton.innerHTML = "Add"
   submitButton.id = "planet-submit"
   submitButton.type = "submit"

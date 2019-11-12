@@ -14,11 +14,12 @@ class Stars {
     this.newStarMass = document.getElementById('new-star-mass')
     this.newStarImage = document.getElementById('new-star-image')
     this.newStarForm.addEventListener('submit', this.createStar.bind(this))
+    //when the star is submitted, bind the Stars object as this, or the this will become the form itself
   }
 
   createStar(e) {
   //  console.log(this)
-    e.preventDefault();
+    e.preventDefault(); //pass in event object and prevents the default of page refresh on form submit
     const nameValue = this.newStarName.value;
     const distanceValue = this.newStarDistance.value;
     const magnitudeValue = this.newStarMagnitude.value;
