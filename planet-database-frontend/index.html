@@ -9,16 +9,18 @@
 
 
   <body>
-    <!-- Top Header -->
+    <!-- Header -->
     <div id="header">
        <h1>Planet Database</h1>
        <h2 id ="txt-inside-img">Database For Exoplanets Discovered</h2>
+       <div>
+           <img id='header-image' src="planet.jpg" alt="stars">
+      </div>
     </div>
 
     <!-- Add New Star -->
     <div id="new-star-container">
       <form id="new-star-form">
-        <h2>Add a new star</h2>
         <label for="new-star-name">Star Name:</label>
         <input type="text" id="new-star-name" placeholder="Enter Star System">
 
@@ -41,7 +43,8 @@
 
         <label for="new-star-image">Image URL:</label>
         <input type="text" id="new-star-image" placeholder="Enter telescope URL image">
-        <button type="submit">Add Star System</button>
+        </br>
+        <button style="margin-top:6px;"type="submit">Add Star System</button>
       </form>
     </div>
 
@@ -89,12 +92,12 @@
       </form>
     </div>
 
-    <!-- Star Grid-->
+    <!-- Star Data-->
     <div class="container">
       <section id="stars-data"></section>
     </div>
 
-    <!-- JS scripts-->
+    <!-- JS -->
     <script src="src/components/star.js"></script>
     <script src="src/components/stars.js"></script>
     <script src="src/components/app.js"></script>

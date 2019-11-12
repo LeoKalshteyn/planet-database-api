@@ -32,19 +32,23 @@ class Star {
     starBlock.appendChild(planetButton)
     planetButton.addEventListener('click', this.getNewStarForm.bind(this))
 
-    const name = document.createElement('h3')
+    const name = document.createElement('p')
+    name.setAttribute("class", "star-details")
     name.innerHTML = (`Name: ${this.name}`)
     starBlock.appendChild(name)
 
-    const distance = document.createElement('h3')
+    const distance = document.createElement('p')
+    distance.setAttribute("class", "star-details")
     distance.innerHTML = (`Distance in LY: ${this.distance}`)
     starBlock.appendChild(distance)
 
-    const magnitude = document.createElement('h3')
+    const magnitude = document.createElement('p')
+    magnitude.setAttribute("class", "star-details")
     magnitude.innerHTML = (`Apparent Magnitude: ${this.magnitude}`)
     starBlock.appendChild(magnitude)
 
-    const mass = document.createElement('h3')
+    const mass = document.createElement('p')
+    mass.setAttribute("class", "star-details")
     mass.innerHTML = (`Solar Mass: ${this.mass}`)
     starBlock.appendChild(mass)
 
@@ -60,9 +64,8 @@ class Star {
     const planets = document.createElement('div')
     planets.setAttribute("id", `planet-${this.id}`)
     planetStats.appendChild(planets)
-    planets.innerHTML = this.planets.map(planet => this.planetDetails(planet)).join('')
-
-  }
+    planets.innerHTML = this.planets.reverse().map(planet => this.planetDetails(planet)).join('')
+    }
 
   planetDetails(planet){
   // console.log(planet)
