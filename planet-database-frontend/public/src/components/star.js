@@ -1,4 +1,5 @@
 class Star {
+  // consc method creates and initializes the objects.
   constructor(starJSON) {
     this.id = starJSON.id
     this.name = starJSON.name
@@ -9,6 +10,7 @@ class Star {
     this.planets = starJSON.planets
   }
 
+  // main function which contains all of the variables for buttons, star and planet structure
   renderStarBlock() {
   const starsContainer = document.getElementById('stars-data')
 
@@ -77,7 +79,7 @@ class Star {
           <p>Orbital-Period (Days): ${planet.orbital_period}</p>
           <p>Eccentricity: ${planet.eccentricity}</p>
           <p>Discovery-Year: ${planet.discovery_year}</p>`
-}
+  }
 
   deleteStar(id){
     return fetch('http://localhost:3000/stars' + '/' + id, {
@@ -91,16 +93,16 @@ class Star {
 
   getNewStarForm(event){
     // console.log(this)
-  event.preventDefault();
-  const newPlanetForm = document.getElementById('new-planet-form') //get new planet form from html
-  const submitButton = document.createElement("button") // creates the add planet button
-  submitButton.innerHTML = "Add"
-  submitButton.id = "planet-submit"
-  submitButton.type = "submit"
-  const buttonDiv = document.getElementById("buttons")
-  buttonDiv.appendChild(submitButton)
-  submitButton.addEventListener('click', this.submitPlanet.bind(this))
-}
+    event.preventDefault();
+    const newPlanetForm = document.getElementById('new-planet-form') //get new planet form from html
+    const submitButton = document.createElement("button") // creates the add planet button
+    submitButton.innerHTML = "Add"
+    submitButton.id = "planet-submit"
+    submitButton.type = "submit"
+    const buttonDiv = document.getElementById("buttons")
+    buttonDiv.appendChild(submitButton)
+    submitButton.addEventListener('click', this.submitPlanet.bind(this))
+  }
 
   submitPlanet(event){
     event.preventDefault();
@@ -115,7 +117,7 @@ class Star {
     const newPlanetEccentricity = document.getElementById('new-planet-eccentricity')
     const newPlanetDiscoveryYear = document.getElementById('new-planet-discovery-year')
 
-    const planetBox = document.getElementById(`planet-${this.id}`)
+    const planetContainer = document.getElementById(`planet-${this.id}`)
     const pDivSeperator= document.createElement('p')
     const pDivLabel = document.createElement('p')
     const pDivPlanetMass = document.createElement('p')
@@ -124,14 +126,14 @@ class Star {
     const pDivOrbitalPeriod = document.createElement('p')
     const pDivEccentricity = document.createElement('p')
     const pDivDiscoveryYear = document.createElement('p')
-    planetBox.appendChild(pDivSeperator)
-    planetBox.appendChild(pDivLabel)
-    planetBox.appendChild(pDivPlanetMass)
-    planetBox.appendChild(pDivRadius)
-    planetBox.appendChild(pDivSemimajorAxis)
-    planetBox.appendChild(pDivOrbitalPeriod)
-    planetBox.appendChild(pDivEccentricity)
-    planetBox.appendChild(pDivDiscoveryYear)
+    planetContainer.appendChild(pDivSeperator)
+    planetContainer.appendChild(pDivLabel)
+    planetContainer.appendChild(pDivPlanetMass)
+    planetContainer.appendChild(pDivRadius)
+    planetContainer.appendChild(pDivSemimajorAxis)
+    planetContainer.appendChild(pDivOrbitalPeriod)
+    planetContainer.appendChild(pDivEccentricity)
+    planetContainer.appendChild(pDivDiscoveryYear)
 
     const planetAddition = {
         star_id: this.id,
@@ -163,7 +165,6 @@ class Star {
       pDivOrbitalPeriod.innerHTML = `<p>Orbital-Period (Days): ${planet.orbital_period}</p>`
       pDivEccentricity.innerHTML = `<p>Eccentricity: ${planet.eccentricity}</p>`
       pDivDiscoveryYear.innerHTML = `<p>Discovery-Year: ${planet.discovery_year}</p>`
-    //  pDiv.innerHTML = [(`<p>Planet Label: ${planet.label}</p>`),(`<p>Mass: ${planet.planet_mass}</p>`),(`<p>Radius: ${planet.radius}</p>`),(`<p>Semimajor-Axis (AU): ${planet.semimajor_axis}</p>`),(`<p>Orbital-Period (Days): ${planet.orbital_period}</p>`),(`<p>Eccentricity: ${planet.eccentricity}</p>`),(`<p>Discovery-Year: ${planet.discovery_year}</p>`)]
 
       newPlanetLabel.value = ' '
       newPlanetMass.value = ' '
