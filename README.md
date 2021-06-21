@@ -13,11 +13,11 @@ Currently, Planet Database has the following features implemented:
 
 Users have the ability to add star systems with detailed information and a satellite/telescope image to the database.
 
-<img src="./addsat.gif" alt="Star GIF" width="600" height="295">
+<img src="./addstar.gif" alt="Star GIF" width="600" height="295">
 
 A user can also add planets to their respective star systems
 
-<img src="./planet.gif" alt="Planet GIF" width="600" height="295">
+<img src="./addplanet.gif" alt="Planet GIF" width="600" height="295">
 
 # Installation:
 
