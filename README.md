@@ -4,9 +4,9 @@ This is an app that lets you add planets(specifically exo planets) to known star
 # Technologies
 The following technologies were used in the production of Museum Manager:
 
-Ruby 2.7.2
-Rails 5.2.3
-Active_Model_Serializers
+- Ruby 2.7.2
+- Rails 5.2.3
+- Active Model Serializers
 
 # Features
 Currently, Planet Database has the following features implemented:
