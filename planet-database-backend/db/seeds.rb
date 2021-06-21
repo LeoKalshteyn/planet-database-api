@@ -13,7 +13,7 @@ s1 = Star.create(name: "Proxima Centauri", distance: "4.2441", magnitude: "11.13
 s2 = Star.create(name: "Barnard's Star", distance: "5.958", magnitude: "9.511", mass: "0.144", image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Barnardstar2006.jpg")
 s3 = Star.create(name: "Epsilon Eridani", distance: "10.446", magnitude: "3.73", mass: "0.83", image: "https://www.eso.org/public/outreach/eduoff/cas/cas2002/cas-projects/sweden_eridani_1/image002.jpg")
 s4 = Star.create(name: "Ross 128", distance: "11.007", magnitude: "11.1", mass: "0.168", image: "https://www.daviddarling.info/images/Ross_128.jpg")
-s5 = Star.create(name: "Gliese 725", distance: "11.490", magnitude: "9.7", mass: "0.248", image: "http://www.richweb.f9.co.uk/astro/images/Gliese_725.20070921.im215066-72.med7x30s.C.50pc.an.jpg")
+s5 = Star.create(name: "Gliese 725", distance: "11.490", magnitude: "9.7", mass: "0.248", image: "https://jumk.de/astronomie/img/struve-2398.jpg")
 s6 = Star.create(name: "Groombridge 34", distance: "11.618", magnitude: "8.1", mass: "0.38", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.w56QM3UqnZQ0Lz5vaDytQQHaE8%26pid%3DApi&f=1")
 
 p1= Planet.create(label: "Proxima b", planet_mass: "0.9", radius: "1.1", semimajor_axis: "0.047", orbital_period: "11.2", eccentricity: "0.02", discovery_year: "2016", star_id: 1 )
